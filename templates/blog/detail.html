@@ -6,6 +6,7 @@
   <h4>{{post.title}} </h4>
   <p> <small> Author: {{post.author}}</small> </p>
   <p>{{post.body}}</p>
+  <a href="{% url 'update_post' post.pk %}">Edit Post</a>
 </div>
 
 {% endblock %}
