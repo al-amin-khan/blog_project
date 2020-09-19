@@ -8,6 +8,16 @@
   </head>
   <body>
     <a href="{% url 'create_post' %}">Create new post</a> | <a href="{% url 'home' %}">Home</a>
+
+    {% if user.is_authenticated %}
+      <p>Welcome, {{user.username}}</p> (<a href="{% url 'logout' %}">Logout</a>)
+
+    {% else %}
+      <p>You are not loged in</p>
+      <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+
+
     {% block content_block %}
 
     {% endblock %}
