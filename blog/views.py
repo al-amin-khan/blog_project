@@ -15,7 +15,9 @@ class PostDetailView(DetailView):
     model = Post
     template_name = 'blog/detail.html'
 
+
 class PostCreateView(CreateView):
+    login_required = True
     model = Post
     template_name = 'blog/create_post.html'
     fields = '__all__'
