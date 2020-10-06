@@ -5,7 +5,8 @@
 
 {% for post in all_post %}
   <div class="">
-    <h4><a href="{% url 'detail' post.pk %}">{{post.title}}</a> </h4>
+    <h4><a href="{% url 'blog:detail' post.slug %}">{{post.title}}</a> </h4>
+    <p>{{post.slug}}</p>
     <p> <small> Author: {{post.author}}</small> </p>
   </div>
 {% endfor %}
