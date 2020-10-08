@@ -20,4 +20,6 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         # return reverse('detail', args=[str(self.id)])
-        return reverse('blog:detail', kwargs={'slug': self.slug})
+        kwargs = self.object.id
+        print(kwargs)
+        return reverse('blog:detail', kwargs=kwargs)

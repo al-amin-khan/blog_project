@@ -21,9 +21,9 @@ class PostDetailView(DetailView):
 
 
 class PostCreateView(CreateView):
-    login_required = True
     model = Post
     fields = '__all__'
+    login_required = True
     template_name = 'blog/create_post.html'
 
 class PostUpdateView(UpdateView):
@@ -34,7 +34,7 @@ class PostUpdateView(UpdateView):
 class PostDeleteView(DeleteView):
     model = Post
     template_name = 'blog/delete_post.html'
-    success_url = reverse_lazy('home')
+    success_url = '/'
 
 class LoginView(LoginView):
     template_name = 'registration/login.html'
