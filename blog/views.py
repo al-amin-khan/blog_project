@@ -9,7 +9,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 class PostListView(ListView):
     context_object_name = 'all_post'
     model = Post
-    # success_url = 'blog:home'
+
     template_name = 'blog/home.html'
 
 class PostDetailView(DetailView):
