@@ -9,7 +9,6 @@
   <p>{{post.body}}</p>
   <p>{{post.slug}}</p>
   <a href="{% url 'blog:update_post' post.slug %}">Edit Post</a> | <a href="{% url 'blog:delete_post' post.slug %}">Delete Post</a>
-  {# <a href="{{post.get_absolute_url}}">Edit Post</a> | <a href="{{post.get_absolute_url}}">Delete Post</a> #}
 </div>
 
 {% endblock %}
