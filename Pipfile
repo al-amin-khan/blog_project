@@ -9,6 +9,8 @@ verify_ssl = true
 django = "*"
 whitenoise = "*"
 django-autoslug = "*"
+django-allauth = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"
